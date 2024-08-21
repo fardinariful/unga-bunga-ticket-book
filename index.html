@@ -69,34 +69,35 @@
             <button class="bg-[#1DD100] px-7 py-5 rounded-2xl mt-8 font-bold raleway_font">Buy Tickets</button>
 
         <!-- statistic section start -->      
- <div class="flex flex-row justify-around items-center gap-10   ">
-  <div class="stat bg-[#FFFFFF] w-auto h-32 px-2  py-2 flex items-center  rounded-3xl border-b-[#1DD100] border-b-4">
-    <img src="./images/people.png" alt="">
-    <div>
-    <p class="font-bold">500K+</p>
-    <p>Registered users</p>
-    </div>
-  </div>
-
-  <div class="stat bg-[#FFFFFF] w-auto h-32 px-2  py-2 flex items-center rounded-3xl border-b-[#1DD100] border-b-4">
-    <img src="./images/ticket-cupon.png" alt="">
-    <div>
-    <p class="font-bold">1.7 lacks</p>
-    <p>Tickets sold</p>
-    </div>
-  </div>
-
-  <div class="stat bg-[#FFFFFF] w-auto h-32 px-2  py-2 flex items-center rounded-3xl border-b-[#1DD100] border-b-4">
-    <img src="./images/stoppage.png" alt="">
-    <div>
-    <p class="font-bold">80K+</p>
-    <p>Rental partners</p>
-    </div>
-  </div>
-</div>
+ 
            <!--statistic section end -->
          </div>
          <!-- Banner section end -->
+         <div class="flex flex-row justify-around items-center  absolute -bottom-[36%] left-1/2 transform -translate-x-1/2 px-36 stats bg-opacity-0 text-left w-full">
+          <div class="stat bg-[#FFFFFF] w-auto h-32 px-5  py-5 flex items-center  rounded-3xl border-b-[#1DD100] border-b-4">
+            <img src="./images/people.png" alt="">
+            <div>
+            <p class="font-bold text-4xl">500K+</p>
+            <p class="text-[#03071299] inter_font">Registered users</p>
+            </div>
+          </div>
+        
+          <div class="stat bg-[#FFFFFF] w-auto h-32 px-5  py-5 flex items-center rounded-3xl border-b-[#1DD100] border-b-4">
+            <img src="./images/ticket-cupon.png" alt="">
+            <div>
+            <p class="font-bold text-4xl">1.7 lacks</p>
+            <p class="text-[#03071299] inter_font">Tickets sold</p>
+            </div>
+          </div>
+        
+          <div class="stat bg-[#FFFFFF] w-auto h-32 px-5  py-5 flex items-center rounded-3xl border-b-[#1DD100] border-b-4">
+            <img src="./images/stoppage.png" alt="">
+            <div>
+            <p class="font-bold text-4xl inter_font ">80K+</p>
+            <p class="text-[#03071299] inter_font">Rental partners</p>
+            </div>
+          </div>
+        </div>
     </header>
     <main >
         <!-- Offer section -->
@@ -313,14 +314,14 @@
         <p class="raleway_font text-2xl font-semibold ">Select Your Seat</p>
         <div class="border-t border-dashed border-[#03071233] mt-6 w-full"></div>
       
-      <div class="w-full flex flex-col gap-3 bg-base_white">
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+      <div class="w-full flex flex-col gap-3 bg-[#F7F8F8] rounded-2xl mt-6">
+        <div class="card card-compact w-96">
           <div class="card-body">
             <div class="flex justify-between w-full">
             <div class="flex gap-1">
             <div>Seat </div>
             <div>
-              <button class="text-white bg-accent text-xs rounded-md font-bold h-fit px-1 "id="seat-taken" >0</button>
+              <button class="text-white bg-accent text-xs rounded-md font-bold h-fit px-1 ">0</button>
             </div>
           </div>
           <div>Class</div>
@@ -330,28 +331,23 @@
         
           <!-- ticket add info -->
           
-          <div class="flex flex-col text-p/60 lg:text-base text-sm lg:gap-3"
-          id="show-info">
-        
-        
+          <div class="flex flex-col text-p/60 lg:text-base text-sm lg:gap-3">
         </div>
         
           <hr>
-        
-        
+
           <!-- show total price -->
-          <div
-          class="text-base_black text-base  font-medium flex justify-between mb-3">
+          <div class="text-base_black text-base  font-medium flex justify-between mb-3">
           <div>
               <p>Total Price</p>
           </div>
           <div>
-              <p>BDT <span id="total-price">0</span></p>
+              <p>BDT <span>0</span></p>
           </div>
         </div>
         <div class="relative">
           <input type="text" id="coupon-code" placeholder="Have any coupon?"
-              class="input input-bordered w-full text-p/40 focus:outline-accent/50" required />
+              class="input input-bordered bg-[#FFFFFF] w-full text-p/40 focus:outline-accent/50" required />
           <button
               class="btn bg-accent text-white text-sm font-semibold lg:px-5 absolute right-0 top-0 bottom-0 hover:bg-accent/50" onClick="updatedGrandTotal()" 
               >Apply</button>
@@ -361,15 +357,32 @@
               <p>Grand Total</p>
                   </div>
                     <div>
-                      <p>BDT <span id="grand-total">0</span></p>
+                      <p>BDT <span>0</span></p>
                            </div>
                                </div>
-        
-        
         </div>
         </div>
+        </div>
+<!-- passenger info -->
+           <div class="mt-4">
+            <p class="inter_font text-[#030712] font-semibold">Passenger Name*</p>
+            <input type="email" name="" id="" placeholder="Enter your Name" class="input input-bordered bg-[#FFFFFF] w-full text-p/40 focus:outline-accent/50 mt-2" required/>
 
-        </div>
+            <p class="inter_font text-[#030712] font-semibold mt-2">Phone number*</p>
+            <input type="email" name="" id="" placeholder="Enter your Name" class="input input-bordered bg-[#FFFFFF] w-full text-p/40 focus:outline-accent/50 mt-2" required/>
+
+            <p class="inter_font text-[#030712] font-semibold mt-2">Email*</p>
+            <input type="email" name="" id="" placeholder="Enter your Name" class="input input-bordered bg-[#FFFFFF] w-full text-p/40 focus:outline-accent/50 mt-2" required/>
+
+           <button class="mt-6 w-full text-center bg-[#1DD100] px-7 py-4 rounded-2xl">
+            <p class="text-[#FFFFFF] raleway_font font-extrabold text-xl">Next</p>
+           </button>
+
+           <div class="flex flex-row justify-around mt-6">
+            <p class="border-b-2 font-inter  text-[#03071299]">Terms and Conditions</p>
+            <p class="border-b-2 font-inter  text-[#03071299]">Cancellation Policy</p>
+           </div>
+           </div>
 
       
       
