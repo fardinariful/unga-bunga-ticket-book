@@ -195,7 +195,7 @@
       </div>
       </div>
          <div class="bg-[#FFFFFF] px-32 py-14 ">
-      <div class="  flex flex-row justify-between gap-20 ">
+      <div class=" flex flex-row justify-between gap-20  ">
         
       <!-- seat features -->
        <div class=" rounded-3xl p-8 ">
@@ -233,8 +233,6 @@
       </button>
     </div>
  <!-- SEAT NUMBER -->
-  
- <!-- LEFT SIDE SEAT -->
 
  <div class="flex flex-row">
   <div class=" flex flex-col gap-1.5 mr-3 ">
@@ -308,9 +306,72 @@
        </div>
 
 
-       <div class="max-h-full w-[2px] bg-[#0307124D]  mx-6"></div>
+       <div class="max-h-full w-[2px] bg-[#0307124D] mx-6"></div>
 
        <!-- selected seat and price -->
+      <div class="w-full">
+        <p class="raleway_font text-2xl font-semibold ">Select Your Seat</p>
+        <div class="border-t border-dashed border-[#03071233] mt-6 w-full"></div>
+      
+      <div class="w-full flex flex-col gap-3 bg-base_white">
+        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+          <div class="card-body">
+            <div class="flex justify-between w-full">
+            <div class="flex gap-1">
+            <div>Seat </div>
+            <div>
+              <button class="text-white bg-accent text-xs rounded-md font-bold h-fit px-1 "id="seat-taken" >0</button>
+            </div>
+          </div>
+          <div>Class</div>
+          <div>Price</div>
+          </div>
+          <div class="border border-dashed border-p/20 my-3"></div>
+        
+          <!-- ticket add info -->
+          
+          <div class="flex flex-col text-p/60 lg:text-base text-sm lg:gap-3"
+          id="show-info">
+        
+        
+        </div>
+        
+          <hr>
+        
+        
+          <!-- show total price -->
+          <div
+          class="text-base_black text-base  font-medium flex justify-between mb-3">
+          <div>
+              <p>Total Price</p>
+          </div>
+          <div>
+              <p>BDT <span id="total-price">0</span></p>
+          </div>
+        </div>
+        <div class="relative">
+          <input type="text" id="coupon-code" placeholder="Have any coupon?"
+              class="input input-bordered w-full text-p/40 focus:outline-accent/50" required />
+          <button
+              class="btn bg-accent text-white text-sm font-semibold lg:px-5 absolute right-0 top-0 bottom-0 hover:bg-accent/50" onClick="updatedGrandTotal()" 
+              >Apply</button>
+        </div>
+        <div class="text-base_black text-base  font-medium flex justify-between mt-3">
+         <div>
+              <p>Grand Total</p>
+                  </div>
+                    <div>
+                      <p>BDT <span id="grand-total">0</span></p>
+                           </div>
+                               </div>
+        
+        
+        </div>
+        </div>
+
+        </div>
+
+      
       
             </div> 
         </section>
