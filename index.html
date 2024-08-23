@@ -66,13 +66,14 @@
          <div class="min-h-screen flex flex-col justify-center items-center  bg-[url(images/banner.png)]  bg-no-repeat bg-cover bg-center rounded-3xl overflow-hidden mt-10 relative">
             <p class="text-[#FFF] font-extrabold text-6xl flex flex-col justify-center items-center"  >End-to-End Travel with <br> <span class="text-[#1DD100]" >P Paribahan</span> </p>
             <p class="text-[#FFF] text-center inter_font">Yes, you can run unit tests and view the results directly within the app. The <br>integrated testing features allow for a streamlined .</p>
-            <button class="bg-[#1DD100] px-7 py-5 rounded-2xl mt-8 font-bold raleway_font">Buy Tickets</button>
+            <button  class="bg-[#1DD100] px-7 py-5 rounded-2xl mt-8 font-bold raleway_font">Buy Tickets</button>
 
-        <!-- statistic section start -->      
+             
  
-           <!--statistic section end -->
+         
          </div>
          <!-- Banner section end -->
+          <!-- statistic section start --> 
          <div class="flex flex-row justify-around items-center  absolute -bottom-[36%] left-1/2 transform -translate-x-1/2 px-36 stats bg-opacity-0 text-left w-full">
           <div class="stat bg-[#FFFFFF] w-auto h-32 px-5  py-5 flex items-center  rounded-3xl border-b-[#1DD100] border-b-4">
             <img src="./images/people.png" alt="">
@@ -98,6 +99,7 @@
             </div>
           </div>
         </div>
+          <!--statistic section end -->
     </header>
     <main >
         <!-- Offer section -->
@@ -159,10 +161,10 @@
             </div>
         </div>
 
-         <button class="flex flex-row gap-2 bg-[#1DD10026] px-5 py-2  h-12 rounded-2xl"> 
+         <button  class="flex flex-row gap-2 bg-[#1DD10026] px-5 py-2  h-12 rounded-2xl"> 
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
           <path d="M5.83333 13.6427C6.45217 13.6427 7.04566 13.8885 7.48325 14.3261C7.92083 14.7637 8.16667 15.3572 8.16667 15.976V18.3093H19.8333V15.976C19.8333 15.3572 20.0792 14.7637 20.5168 14.3261C20.9543 13.8885 21.5478 13.6427 22.1667 13.6427M5.83333 13.6427C5.21449 13.6427 4.621 13.8885 4.18342 14.3261C3.74583 14.7637 3.5 15.3572 3.5 15.976V20.6427C3.5 21.2615 3.74583 21.855 4.18342 22.2926C4.621 22.7302 5.21449 22.976 5.83333 22.976H22.1667C22.7855 22.976 23.379 22.7302 23.8166 22.2926C24.2542 21.855 24.5 21.2615 24.5 20.6427V15.976C24.5 15.3572 24.2542 14.7637 23.8166 14.3261C23.379 13.8885 22.7855 13.6427 22.1667 13.6427M5.83333 13.6427V7.80933C5.83333 6.88107 6.20208 5.99083 6.85846 5.33445C7.51484 4.67808 8.40508 4.30933 9.33333 4.30933H18.6667C19.5949 4.30933 20.4852 4.67808 21.1415 5.33445C21.7979 5.99083 22.1667 6.88107 22.1667 7.80933V13.6427M7 22.976V25.3093M21 22.976V25.3093" stroke="#1DD100" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg> 40 seats left</button>
+        </svg><span id="seat_left">40</span>  seats left</button>
       </div>
       <div class="bg-[#F7F8F8] mt-6 rounded-2xl p-8">
       <!-- Route -->
@@ -238,69 +240,69 @@
 
  <div class="flex flex-row">
   <div class=" flex flex-col gap-1.5 mr-3 ">
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl text-[#03071280]">A</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">B</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">C</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">D</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">E</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">F</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">G</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">H</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">I</p>
-    <p class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">J</p>
+    <p id="A" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl text-[#03071280]">A</p>
+    <p id="B" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">B</p>
+    <p id="C" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">C</p>
+    <p id="D" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">D</p>
+    <p id="E" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">E</p>
+    <p id="F" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">F</p>
+    <p id="G" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">G</p>
+    <p id="H" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-4 text-[#03071280]">H</p>
+    <p id="I" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">I</p>
+    <p id="J" class="bg-white p-4 h-3 flex items-center font-medium rounded-xl mt-3 text-[#03071280]">J</p>
   </div>
 
   <div class="flex flex-row gap-3 mr-16">
   <div class="flex flex-col">
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] ">A1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">B1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">C1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">D1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">E1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">F1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">G1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">H1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">I1</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">J1</button>
+    <button id="A1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] ">    A1</button>
+    <button id="B1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">B1</button>
+    <button id="C1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">C1</button>
+    <button id="D1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">D1</button>
+    <button id="E1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">E1</button>
+    <button id="F1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">F1</button>
+    <button id="G1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">G1</button>
+    <button id="H1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">H1</button>
+    <button id="I1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">I1</button>
+    <button id="J1" class="bg-[#F7F8F8] rounded-xl font-medium p-5 h-3 flex items-center text-[#03071280] mt-3">J1</button>
   </div>
   <div class="flex flex-col">
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center ">A2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">B2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">C2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">D2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">E2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">F2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">G2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">H2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">I2</button>
-    <button class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">J2</button>
+    <button id="A2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center ">    A2</button>
+    <button id="B2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">B2</button>
+    <button id="C2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">C2</button>
+    <button id="D2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">D2</button>
+    <button id="E2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">E2</button>
+    <button id="F2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">F2</button>
+    <button id="G2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">G2</button>
+    <button id="H2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">H2</button>
+    <button id="I2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">I2</button>
+    <button id="J2" class="bg-[#F7F8F8] rounded-xl font-medium text-[#03071280] p-5 h-3 flex items-center mt-3">J2</button>
   </div>
 </div>
 
   <div class="flex flex-row gap-3 ">
   <div class="flex flex-col">
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center ">A3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">B3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">C3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">D3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">E3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">F3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">G3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">H3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">I3</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">J3</button>
+    <button id="A3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center ">    A3</button>
+    <button id="B3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">B3</button>
+    <button id="C3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">C3</button>
+    <button id="D3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">D3</button>
+    <button id="E3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">E3</button>
+    <button id="F3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">F3</button>
+    <button id="G3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">G3</button>
+    <button id="H3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">H3</button>
+    <button id="I3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">I3</button>
+    <button id="J3" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">J3</button>
   </div>
   <div class="flex flex-col">
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center ">A4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">B4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">C4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">D4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">E4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">F4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">G4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">H4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">I4</button>
-    <button class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">J4</button>
+    <button id="A4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center ">    A4</button>
+    <button id="B4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">B4</button>
+    <button id="C4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">C4</button>
+    <button id="D4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">D4</button>
+    <button id="E4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">E4</button>
+    <button id="F4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">F4</button>
+    <button id="G4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">G4</button>
+    <button id="H4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">H4</button>
+    <button id="I4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">I4</button>
+    <button id="J4" class="bg-[#F7F8F8] rounded-xl text-[#03071280] font-medium p-5 h-3 flex items-center mt-3">J4</button>
   </div>
 </div>
 </div>
@@ -322,7 +324,7 @@
             <div class="flex gap-1">
             <div>Seat </div>
             <div>
-              <button class="text-white bg-accent text-xs rounded-md font-bold h-fit px-1 ">0</button>
+              <button class="text-white bg-accent text-xs rounded-md font-bold h-fit px-1 " id="booked_seat">0</button>
             </div>
           </div>
           <div>Class</div>
