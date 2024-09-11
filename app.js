@@ -10,6 +10,8 @@ for(const btn of all_btn){
     btn.addEventListener("click",function(e){
         const seatname=e.target.innerText;
         count=count+1;
+        
+        
         const seatleft=seatcapticity-count;
         
         const ticket_info=document.getElementById("ticket_info");
@@ -21,11 +23,19 @@ for(const btn of all_btn){
         p1.innerText=ticketClass;
         const p2=document.createElement("p");
         p2.innerText=seatPrice;
-        
+       
+        if(count>6){
+            alert("Maximum limit done");
+            disablebtn();
+            return;
+            
+        }
         div.appendChild(p3);
         div.appendChild(p1);
         div.appendChild(p2);
         ticket_info.appendChild(div);
+
+        
 
         //<p>BDT <span id="TOTAL_PRICE">0</span></p>
         const totalprice=document.getElementById("TOTAL_PRICE").innerText;
@@ -60,9 +70,14 @@ for(const btn of all_btn){
 }
 
 
+function disablebtn(){
+const all_btn=document.getElementsByClassName("allbtn");
+for(const btn of all_btn){
+    btn.setAttribute("disabled", true);
+}
 
 
-    
+} 
 
 
 function setInnerText(id,value){
