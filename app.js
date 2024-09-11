@@ -10,7 +10,16 @@ for(const btn of all_btn){
     btn.addEventListener("click",function(e){
         const seatname=e.target.innerText;
         count=count+1;
+        if(count>6){
+            alert("Maximum limit done");
+            disablebtn();
+            return;
+            
+        }
         
+        e.target.setAttribute("disabled",false);
+        btn.style.backgroundColor="#1DD100";
+        btn.style.textColor="White";
         
         const seatleft=seatcapticity-count;
         
@@ -24,12 +33,7 @@ for(const btn of all_btn){
         const p2=document.createElement("p");
         p2.innerText=seatPrice;
        
-        if(count>6){
-            alert("Maximum limit done");
-            disablebtn();
-            return;
-            
-        }
+     
         div.appendChild(p3);
         div.appendChild(p1);
         div.appendChild(p2);
@@ -42,32 +46,44 @@ for(const btn of all_btn){
         const convertedprice=parseInt(totalprice);
         const TOTAL=convertedprice+seatPrice;
 
-        //GRAND_TOTAL
-        const grandtotal=document.getElementById("GRAND_TOTAL").innerText;
-        const convertedprice1=parseInt(grandtotal);
-        const TOTAL1=convertedprice1+seatPrice;
         
-        
-
-        
-
-
-
-        
-
-
-
-
+     
 
         setInnerText("booked_seat",count);
         setInnerText("seat_left",seatleft);
+        grandtotal();
         setInnerText("TOTAL_PRICE",TOTAL);
-        setInnerText("GRAND_TOTAL",TOTAL1);
+       
+
 
 
 })
 
 }
+
+function grandtotal(){
+    const grandtotal=document.getElementById("TOTAL_PRICE").innerText;
+    const convertedprice1=parseInt(grandtotal);
+    
+
+    const coupon_code=document.getElementById("coupon-code").value;
+    if(coupon_code==="NEW15"){
+        document.getElementById("GRAND_TOTAL").innerText=convertedprice1-(seatPrice*0.15);
+    }
+    else if(coupon_code==="Couple20"){
+
+     document.getElementById("GRAND_TOTAL").innerText=convertedprice1-(seatPrice*0.2);
+    }
+
+    else{
+        document.getElementById("GRAND_TOTAL").innerText=convertedprice1+seatPrice;
+    }
+    
+
+    // const TOTAL1=convertedprice1+seatPrice;
+
+}
+
 
 
 function disablebtn(){
