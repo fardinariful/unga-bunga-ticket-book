@@ -7,7 +7,6 @@ let seatcapticity=40;
 const ticketClass="Economy";
 const seatPrice=550;
 for(const btn of all_btn){
-    //seat_left
     btn.addEventListener("click",function(e){
         const seatname=e.target.innerText;
         count=count+1;
@@ -26,9 +25,23 @@ for(const btn of all_btn){
         div.appendChild(p3);
         div.appendChild(p1);
         div.appendChild(p2);
-       
-
         ticket_info.appendChild(div);
+
+        //<p>BDT <span id="TOTAL_PRICE">0</span></p>
+        const totalprice=document.getElementById("TOTAL_PRICE").innerText;
+        const convertedprice=parseInt(totalprice);
+        const TOTAL=convertedprice+seatPrice;
+
+        //GRAND_TOTAL
+        const grandtotal=document.getElementById("GRAND_TOTAL").innerText;
+        const convertedprice1=parseInt(grandtotal);
+        const TOTAL1=convertedprice1+seatPrice;
+        
+        
+
+        
+
+
 
         
 
@@ -38,10 +51,15 @@ for(const btn of all_btn){
 
         setInnerText("booked_seat",count);
         setInnerText("seat_left",seatleft);
+        setInnerText("TOTAL_PRICE",TOTAL);
+        setInnerText("GRAND_TOTAL",TOTAL1);
+
 
 })
 
 }
+
+
 
 
     
